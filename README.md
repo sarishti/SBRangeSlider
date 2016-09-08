@@ -8,7 +8,7 @@ A simple range slider made in Swift.The user can select the images for thumbs as
 ## Use
 This control is **IBDesignable** and uses the **target-action** pattern for change values of thumbs.
 
-In order to be notified when either thumb value changes, register for **.ValueChanged**:
+In order to be notified when either thumb value changes, register for **.ValueChanged**: action.
 
 ## Implementation
 
@@ -33,5 +33,6 @@ The range slider can be customized and information can be accessed through these
 ## License
 SBRangeSlider is available under the MIT License
 
-If you use it and like it, let me know: [@sarishti](sarishti09@gmail.com)
+If you use it and like it, let me know: 
+[@sarishti](sarishti09@gmail.com)
 
