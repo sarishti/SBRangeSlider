@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SBRangeSlider" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTW-Oq-yL9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range Slider" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLw-db-Aof">
+                                        <rect key="frame" x="20" y="84" width="560" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="0mj-OX-f4a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q11-br-gEd" customClass="SBRangeSlider" customModule="SBRangeSlider" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="278" width="580" height="44"/>
+                                        <color key="backgroundColor" red="0.74901960779999999" green="0.98431372549999996" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="w1o-8g-jH8"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minVal">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxVal">
+                                                <real key="value" value="300"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minRange">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMaximumVal">
+                                                <real key="value" value="200"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMinimumVal">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="trackImg" value="range_selector_line_yellow"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="range_selector_dot"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="trackBgImg" value="range_selector_line_gray"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="rangeSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mv3-9h-Itt"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeP-ln-eaT">
+                                        <rect key="frame" x="20" y="250" width="50" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="0dp-3N-zd7"/>
+                                            <constraint firstAttribute="height" constant="20" id="yK1-HD-y1M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2On-6m-Y86">
+                                        <rect key="frame" x="510" y="250" width="70" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="RHN-EO-Rsq"/>
+                                            <constraint firstAttribute="width" constant="70" id="jTz-kQ-8Ro"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Q11-br-gEd" firstAttribute="top" secondItem="CeP-ln-eaT" secondAttribute="bottom" constant="8" id="DPC-fB-VhU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q11-br-gEd" secondAttribute="trailing" constant="10" id="Mlz-t4-2HO"/>
+                                    <constraint firstItem="Q11-br-gEd" firstAttribute="centerY" secondItem="wTW-Oq-yL9" secondAttribute="centerY" id="QKK-fC-kVF"/>
+                                    <constraint firstAttribute="trailing" secondItem="rLw-db-Aof" secondAttribute="trailing" constant="20" id="WOK-qT-fg1"/>
+                                    <constraint firstAttribute="trailing" secondItem="2On-6m-Y86" secondAttribute="trailing" constant="20" id="cp1-XK-Y83"/>
+                                    <constraint firstItem="CeP-ln-eaT" firstAttribute="leading" secondItem="wTW-Oq-yL9" secondAttribute="leading" constant="20" id="eqB-w9-4vc"/>
+                                    <constraint firstItem="rLw-db-Aof" firstAttribute="leading" secondItem="wTW-Oq-yL9" secondAttribute="leading" constant="20" id="gB7-Gk-HG2"/>
+                                    <constraint firstItem="rLw-db-Aof" firstAttribute="top" secondItem="wTW-Oq-yL9" secondAttribute="top" constant="84" id="nSu-KC-5K1"/>
+                                    <constraint firstItem="Q11-br-gEd" firstAttribute="top" secondItem="2On-6m-Y86" secondAttribute="bottom" constant="8" id="tq9-zN-dRS"/>
+                                    <constraint firstItem="Q11-br-gEd" firstAttribute="leading" secondItem="wTW-Oq-yL9" secondAttribute="leading" constant="10" id="yG2-fD-6u4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wTW-Oq-yL9" secondAttribute="bottom" id="92R-Ju-OGl"/>
+                            <constraint firstItem="wTW-Oq-yL9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MXs-Ae-MuQ"/>
+                            <constraint firstItem="wTW-Oq-yL9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ScS-lq-L0u"/>
+                            <constraint firstAttribute="trailing" secondItem="wTW-Oq-yL9" secondAttribute="trailing" id="alV-bu-WK6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblMaxValue" destination="2On-6m-Y86" id="gh8-M4-ZhL"/>
+                        <outlet property="lblMinValue" destination="CeP-ln-eaT" id="WQ6-Hb-YS5"/>
+                        <outlet property="vwSBRangeSlider" destination="Q11-br-gEd" id="G8k-Bc-nuN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492" y="305"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="range_selector_dot" width="34" height="34"/>
+        <image name="range_selector_line_gray" width="300" height="4"/>
+        <image name="range_selector_line_yellow" width="300" height="4"/>
+    </resources>
+</document>
